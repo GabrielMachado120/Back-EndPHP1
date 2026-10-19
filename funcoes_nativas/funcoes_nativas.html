@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Funções</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        input {
+            border-radius: 10px;
+            padding: 8px;
+            border: 1px solid #999;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+
+        .inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+
+        .campo input {
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .inputs {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Potência</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Potência de um Número</h2>
+
+            <form action="potencia.php" method="post">
+                <label for="potencia">Número:</label>
+                <input type="number" id="potencia" name="n" step="any" required>
+
+                <input type="submit" value="Potência">
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Raiz Quadrada</h2>
+
+            <form action="raiz_quadrada.php" method="post">
+                <label for="raiz">Número:</label>
+                <input type="number" id="raiz" name="n" min="0" step="any" required>
+
+                <input type="submit" value="Raiz">
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Valor Absoluto</h2>
+
+            <form action="valor_absoluto.php" method="post">
+                <label for="absoluto">Número:</label>
+                <input type="number" id="absoluto" name="n" step="any" required>
+
+                <input type="submit" value="Absoluto">
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Maior e Menor Valor</h2>
+
+            <form action="maior_menor.php" method="post">
+
+                <div class="inputs">
+
+                    <div class="campo">
+                        <label for="a">1º Número:</label>
+                        <input type="number" name="a" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="b">2º Número:</label>
+                        <input type="number" name="b" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="c">3º Número:</label>
+                        <input type="number" name="c" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="d">4º Número:</label>
+                        <input type="number" name="d" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="e">5º Número:</label>
+                        <input type="text" name="e" required>
+                    </div>
+                </div>
+                <input type="submit" value="Calcular">
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h2>Arredondamento</h2>
+            <form action="arredondamento.php" method="post">
+                <label>Número com virgula: </label>
+                <input type="text" name="n">
+                <input type="submit" value="arredondar">
+            </form>
+        </section>
+        <hr>
+        <section>
+            <h2>Número Aleatório</h2>
+            <form action="numero_aleatorio.php" method="post">
+                <label>Min: </label>
+                <input type="text" name="n1">
+                <label>Max: </label>
+                <input type="text" name="n2">
+                <input type="submit" value="sortear">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
